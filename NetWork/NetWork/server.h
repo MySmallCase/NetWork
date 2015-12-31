@@ -7,7 +7,11 @@
 //
 
 #import "DataServer.h"
+#import "model.h"
+#import <MJExtension.h>
 
 @interface server : DataServer
+
+
 
 @end

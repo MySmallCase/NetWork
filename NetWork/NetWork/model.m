@@ -8,6 +8,11 @@
 
 #import "model.h"
 
-@implementation model
+@implementation baseModel : NSObject
 
 @end
+@implementation Data
+
+@end
+
+

@@ -7,10 +7,15 @@
 //
 
 #import "ViewController.h"
-#import "server.h"
-#import "model.h"
+#import "viewModel.h"
+
 
 @interface ViewController ()
+
+@property (nonatomic,strong) viewModel *model;
+
+
+@property (nonatomic,strong) UILabel *label;
 
 @end
 
@@ -19,14 +24,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //    /demo/aaa
     
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[@"id"] = @"1";
-    [server postUrl:@"/demo/aaa" params:dict modelClass:[model class] responseBlock:^(id dataObj, NSError *error) {
-        NSLog(@"%@==",dataObj);
+//    viewModel *model = [[viewModel alloc] initWithGetUserInfo];
+//    NSString *str = [model getUserInfo];
+    
+    [self.view addSubview:self.label];
+    
+    
+    [viewModel getUserInfoData:^(id obj) {
+        
+        if (obj == nil) {
+            self.label.text = @"参数错误";
+        }else{
+            self.label.text = obj;
+        }
+        
+        
     }];
     
     
+    
+}
+
+
+- (UILabel *)label{
+    if (!_label) {
+        _label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
+        _label.backgroundColor = [UIColor blueColor];
+        _label.textColor = [UIColor redColor];
+        _label.font = [UIFont systemFontOfSize:14.0f];
+//        _label.text = @"测试";
+    }
+    return _label;
 }
 
 

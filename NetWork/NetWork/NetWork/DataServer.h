@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NetWorkRequest.h"
 
+//#define error 0;
 
 @interface DataServer : NSObject
 

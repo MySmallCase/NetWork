@@ -7,16 +7,23 @@
 //
 
 #import "server.h"
-#import "model.h"
 
-#import <MJExtension.h>
+
+
 
 @implementation server
 
 + (id)modelTransformationWithResponseObj:(id)responseObj modelClass:(Class)modelClass{
 
-    model *m = [modelClass mj_objectWithKeyValues:responseObj];
-    return m.error;
+    
+    baseModel *m = [modelClass mj_objectWithKeyValues:responseObj];
+    if (![m.error isEqualToString:@"0"]) {
+        return m.message;
+    }else{
+        return m.data;
+    }
+        
+    
     
 }
 

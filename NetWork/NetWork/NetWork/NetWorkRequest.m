@@ -11,7 +11,8 @@
 
 #import <sys/sysctl.h>
 
-static const NSString *baseUrl = @"https://api.cellmyth.cn/app";
+//static const NSString *baseUrl = @"https://api.cellmyth.cn/app";
+static const NSString *baseUrl = @"https://weixin.tj-jn.com";
 
 @implementation NetWorkRequest
 
@@ -28,12 +29,11 @@ static const NSString *baseUrl = @"https://api.cellmyth.cn/app";
     
     NSString *postUrl = [NSString stringWithFormat:@"%@%@",baseUrl,url];
     
-    NSMutableDictionary *param = [self dictionaryWithParams:params];
-    
-    NSLog(@"%@",param);
-    
+    //传输设备相关信息代码
+//    NSMutableDictionary *param = [self dictionaryWithParams:params];
+        
     AFHTTPSessionManager *manager = [self getManager];
-    [manager POST:postUrl parameters:param progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager POST:postUrl parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successHandle(responseObject);
@@ -67,6 +67,10 @@ static const NSString *baseUrl = @"https://api.cellmyth.cn/app";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
     manager.securityPolicy = securityPolicy;
+    
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    
+    
     manager.requestSerializer.timeoutInterval = 10.0f;
     
     return manager;

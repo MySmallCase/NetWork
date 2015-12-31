@@ -22,6 +22,7 @@
 		1FA022D41C33D03B00B190BD /* model.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA022D31C33D03B00B190BD /* model.m */; };
 		1FA022DC1C33EE7200B190BD /* api.cellmyth.cn.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1FA022DA1C33EE7200B190BD /* api.cellmyth.cn.cer */; };
 		1FA022DD1C33EE7200B190BD /* zhengshu.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1FA022DB1C33EE7200B190BD /* zhengshu.cer */; };
+		1FBF31C21C34FE08004E6EFF /* viewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF31C11C34FE08004E6EFF /* viewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		1FA022D31C33D03B00B190BD /* model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = model.m; sourceTree = "<group>"; };
 		1FA022DA1C33EE7200B190BD /* api.cellmyth.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = api.cellmyth.cn.cer; sourceTree = "<group>"; };
 		1FA022DB1C33EE7200B190BD /* zhengshu.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhengshu.cer; sourceTree = "<group>"; };
+		1FBF31C01C34FE08004E6EFF /* viewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewModel.h; sourceTree = "<group>"; };
+		1FBF31C11C34FE08004E6EFF /* viewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewModel.m; sourceTree = "<group>"; };
 		28964BEC21E7889D77FD965A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		689A52220D97F918D15414D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		992D45AEB54C1078241C6618 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,13 +135,15 @@
 				1FA0229C1C33B54D00B190BD /* ViewController.m */,
 				1FA022CF1C33CFDF00B190BD /* server.h */,
 				1FA022D01C33CFDF00B190BD /* server.m */,
+				1FA022D21C33D03B00B190BD /* model.h */,
+				1FA022D31C33D03B00B190BD /* model.m */,
+				1FBF31C01C34FE08004E6EFF /* viewModel.h */,
+				1FBF31C11C34FE08004E6EFF /* viewModel.m */,
 				1FA0229E1C33B54D00B190BD /* Main.storyboard */,
 				1FA022A11C33B54D00B190BD /* Assets.xcassets */,
 				1FA022A31C33B54D00B190BD /* LaunchScreen.storyboard */,
 				1FA022A61C33B54D00B190BD /* Info.plist */,
 				1FA022951C33B54D00B190BD /* Supporting Files */,
-				1FA022D21C33D03B00B190BD /* model.h */,
-				1FA022D31C33D03B00B190BD /* model.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 			files = (
 				1FA022D11C33CFDF00B190BD /* server.m in Sources */,
 				1FA0229D1C33B54D00B190BD /* ViewController.m in Sources */,
+				1FBF31C21C34FE08004E6EFF /* viewModel.m in Sources */,
 				1FA022D41C33D03B00B190BD /* model.m in Sources */,
 				1FA0229A1C33B54D00B190BD /* AppDelegate.m in Sources */,
 				1FA022CE1C33C21700B190BD /* DataServer.m in Sources */,
